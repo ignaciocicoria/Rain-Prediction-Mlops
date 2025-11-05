@@ -14,7 +14,7 @@ El flujo completo abarca desde el análisis y preparación de datos hasta la pue
 
 ##  Estructura del proyecto
 
-'''
+```
 rain-prediction-mlops/
 │
 ├── docker/ # Archivos para deployment con Docker
@@ -30,7 +30,7 @@ rain-prediction-mlops/
 ├── weatherAUS.csv # Dataset meteorológico original
 ├── coordenadas_aus.csv # Coordenadas geográficas para clustering
 └── README.md # Documentación general del proyecto
-'''
+```
 ---
 
 ##  Flujo del proyecto
