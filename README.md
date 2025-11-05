@@ -75,6 +75,31 @@ rain-prediction-mlops/
 
 ---
 
+## 📈 Resultados y métricas del modelo final
+
+ 
+El modelo final —que combina **regularización**, **ajuste de umbral** y **optimización de hiperparámetros**— logró el mejor equilibrio entre recall y precisión, alineándose con el objetivo del problema: **maximizar la detección de lluvias**.
+
+Este enfoque prioriza el **recall de la clase minoritaria (lluvia)**, aun sacrificando cierta precisión.  
+En términos prácticos, el modelo detecta correctamente el 92 % de los días en los que efectivamente llueve.
+
+| Clase | Precision | Recall | F1-score | Support |
+|:------|-----------:|--------:|----------:|--------:|
+| 0 (No lluvia) | 0.98 | 0.34 | 0.50 | 22 064 |
+| 1 (Lluvia) | 0.30 | 0.98 | 0.46 | 6 375 |
+| **Accuracy global** |   |   | **0.48** | 28 439 |
+| **Macro promedio** | 0.64 | 0.66 | 0.48 | 28 439 |
+| **Weighted promedio** | 0.83 | 0.48 | 0.49 | 28 439 |
+
+Además, se definió una **métrica custom (custom = 0.75)** para ponderar el recall de la clase 1, que representa los casos en los que realmente llueve.  
+Los modelos de AutoML y redes neuronales obtuvieron valores similares (`custom = 0.71`), aunque el modelo optimizado sigue siendo el más robusto para este objetivo.
+
+**Conclusión:**  
+El ajuste del umbral de decisión y la regularización permiten construir un modelo más sensible a los casos de lluvia, priorizando la detección (recall) sobre la precisión.  
+Según el caso de uso, esta preferencia puede ajustarse para lograr un balance diferente entre ambos indicadores.
+
+---
+
 ##  Tecnologías utilizadas
 
 | Categoría | Herramientas |
@@ -87,19 +112,6 @@ rain-prediction-mlops/
 | **AutoML** | pycaret |
 | **Deep Learning** | TensorFlow / Keras |
 | **Despliegue (MLOps)** | Docker |
-
----
-
-## Resultados principales
-
-- Modelo final: **Regresión Logística optimizada**  
-- Métricas obtenidas:
-  - **Recall:** alto desempeño en identificación de días lluviosos  
-  - **Precision y F1-Score:** balanceadas según el umbral óptimo determinado  
-  - **ROC-AUC:** validación del poder discriminativo del modelo  
-
-La interpretación con SHAP permitió identificar las variables más influyentes:  
-**Humidity3pm**, **RainToday**, **Pressure9am**, y **Cloud3pm**.
 
 ---
 
