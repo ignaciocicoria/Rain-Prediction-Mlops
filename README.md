@@ -81,7 +81,7 @@ rain-prediction-mlops/
 El modelo final —que combina **regularización**, **ajuste de umbral** y **optimización de hiperparámetros**— logró el mejor equilibrio entre recall y precisión, alineándose con el objetivo del problema: **maximizar la detección de lluvias**.
 
 Este enfoque prioriza el **recall de la clase minoritaria (lluvia)**, aun sacrificando cierta precisión.  
-En términos prácticos, el modelo detecta correctamente el 92 % de los días en los que efectivamente llueve.
+En términos prácticos, el modelo detecta correctamente el 98 % de los días en los que efectivamente llueve.
 
 | Clase | Precision | Recall | F1-score | Support |
 |:------|-----------:|--------:|----------:|--------:|
