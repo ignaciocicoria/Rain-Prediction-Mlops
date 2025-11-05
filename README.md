@@ -14,21 +14,21 @@ El flujo completo abarca desde el análisis y preparación de datos hasta la pue
 
 ##  Estructura del proyecto
 
-rain-prediction-mlops/
+rain-prediction-mlops/.
 │
-├── docker/ # Archivos para deployment con Docker
-│ ├── Dockerfile # Instrucciones de build & run
-│ ├── README.md # Documentación Docker
-│ ├── inferencia.py # Script de inferencia
-│ ├── requirements.txt # Librerías mínimas para inferencia
-│ ├── pipeline.pkl # Pipeline serializado
-│ └── transformadores/ # Módulos custom de preprocesado
+├── docker/ # Archivos para deployment con Docker.
+│ ├── Dockerfile # Instrucciones de build & run.
+│ ├── README.md # Documentación Docker.
+│ ├── inferencia.py # Script de inferencia.
+│ ├── requirements.txt # Librerías mínimas para inferencia.
+│ ├── pipeline.pkl # Pipeline serializado.
+│ └── transformadores/ # Módulos custom de preprocesado.
 │
-├── TP-clasificacion-AA1.ipynb # Notebook principal de análisis y modelado
-├── MLOps.ipynb # Notebook de deployment e integración con Docker
-├── weatherAUS.csv # Dataset meteorológico original
-├── coordenadas_aus.csv # Coordenadas geográficas para clustering
-└── README.md # Documentación general del proyecto
+├── TP-clasificacion-AA1.ipynb # Notebook principal de análisis y modelado.
+├── MLOps.ipynb # Notebook de deployment e integración con Docker.
+├── weatherAUS.csv # Dataset meteorológico original.
+├── coordenadas_aus.csv # Coordenadas geográficas para clustering.
+└── README.md # Documentación general del proyecto.
 
 ---
 
